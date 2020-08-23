@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loksewaguide/splash.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,39 +15,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Loksewa Guide'),
-      ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-
-            ],
-          ),
-          Row(
-            children: [
-
-            ],
-          ),
-          Row(
-            children: [
-
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 
