@@ -25,11 +25,21 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Text(
-          "Loksewa Guide",
-          style: TextStyle(
-            fontSize: 60,
-          ),
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 50,
+              ),
+            ),
+            Container(
+              child: Image(
+                image: AssetImage(
+                  "images/loksewa.png"
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );

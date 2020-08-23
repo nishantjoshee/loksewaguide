@@ -9,12 +9,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  Widget customcard(){
+  Widget customcard(String topicName, String description, String imagePath){
     return Padding(
       padding: EdgeInsets.all(20),
       child: InkWell(
         child: Material(
-          elevation: 10,
+          shadowColor: Colors.deepPurple,
+          elevation: 8,
           child: Container(
             child: Column(
               children: [
@@ -24,18 +25,40 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child: Material(
                     child: Container(
-                      child: Text("Universe"),
+                      child: Text(
+                          topicName,
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding:EdgeInsets.symmetric(
+                  padding: EdgeInsets.symmetric(
                     vertical: 10,
-                  ) ,
-                  child: Material(
-                    child: Container(
-                      child: Text("Sets: 10"),
+                  ),
+                  child: Container(
+                    child: ClipRect(
+                      child: Image(
+                        image: AssetImage(
+                              imagePath,
+                        )
+                      ),
                     ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 10,
+                  ),
+                  child: Text(
+                    description,
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+
                   ),
                 )
               ],
@@ -50,11 +73,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Loksewa Guide"),
+        title: Text("Computer Officer"),
       ),
       body: ListView(
         children: [
-          customcard(),
+          customcard("Artificial Intelligence", "Learn more about artificial intelligence.", "images/ai.jpg"),
+          customcard("Data Structure and Algorithm", "Let's learn about  different data structures and algorithms", "images/dsa.png"),
+          customcard("Object Oriented Programming", "Object oriented programming concepts", "images/oop.png"),
+          customcard("Computer Network", "Let's learn about computer network", "images/cn.jpg"),
+          customcard("Database Management System", "Learn about DBMS and challenge yourself", "images/dsa.png"),
+          customcard("Computer Graphics", "Learn how graphics system works inside a computer", "images/dsa.png"),
         ],
       ),
     );
