@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:loksewaguide/quiz_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -13,6 +15,11 @@ class _HomePageState extends State<HomePage> {
     return Padding(
       padding: EdgeInsets.all(20),
       child: InkWell(
+        onTap: (){
+          Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) => getjson(),
+          ));
+        },
         child: Material(
           shadowColor: Colors.deepPurple,
           elevation: 8,
@@ -36,10 +43,10 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(
-                    vertical: 10,
-                  ),
-                  child: Container(
-                    child: ClipRect(
+                      vertical: 10,
+                    ),
+                    child: Container(
+                      child: ClipRect(
                       child: Image(
                         image: AssetImage(
                               imagePath,
@@ -71,6 +78,9 @@ class _HomePageState extends State<HomePage> {
   }
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown, DeviceOrientation.portraitUp
+    ]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Computer Officer"),

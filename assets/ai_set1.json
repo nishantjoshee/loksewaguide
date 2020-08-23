@@ -1,0 +1,88 @@
+[
+    {
+        "1": "The main task of a problem-solving agent is",
+        "2": "What is state space",
+        "3": "A search algorithm takes ____ as an input and returns ____ as an output",
+        "4": "A probelm in a search space is defined by",
+        "5": "The Set of actions for a problem in a state space is formulated by a",
+        "6": "The process of removing detail from a given state representation is called",
+        "7": "A problem solving approach works well for",
+        "8": "The ____ is a touring problem in which each city must be visited exactly once. The aim is to find the shortest tour.",
+        "9": "Which search strategy is also called as blind search?",
+        "10": "How many types are available in uninformed search method?"
+    },
+    {
+        "1": {
+            "a": "Solve the given problem and reach to goal",
+            "b": "To find out which sequence of action will get it to the goal state",
+            "c": "Both A and B",
+            "d": "Neither A nor B"
+        },
+        "2": {
+            "a": "The whole problem",
+            "b": "Your definition to a problem",
+            "c": "Problem you design",
+            "d": "Representing your problem with variable and parameter"
+        },
+        "3": {
+            "a": "Inout, Output",
+            "b": "Problem, Solution",
+            "c": "Solution, Problem",
+            "d": "Parameters, Sequence of actiobs"
+        },
+        "4": {
+            "a": "Initial state",
+            "b": "Goal state",
+            "c": "intermediate states",
+            "d": "All of the above"
+        },
+        "5": {
+            "a": "Intermediate states",
+            "b": "Initial state",
+            "c": "Successor function, which takes current action and returns next immediate state",
+            "d": "None of the mentioned"
+        },
+        "6": {
+            "a": "Extraction",
+            "b": "Abstraction",
+            "c": "Information Retrieval",
+            "d": "Mining of data"
+        },
+        "7": {
+            "a": "8-puzzle problem",
+            "b": "8-queen problem",
+            "c": "Finding a optimal path from a given source to destination",
+            "d": "Mars Hover(Robot Navigation)"
+        },
+        "8": {
+            "a": "Finding shortest path between a source and a destination",
+            "b": "Travelling salesman problem",
+            "c": "Map coloring problem",
+            "d": "Depth first search traversal on a given map represented as a graph"
+        },
+        "9": {
+            "a": "Uninformed search",
+            "b": "Informed search",
+            "c": "Simple reflex search",
+            "d": "All of the mentioned"
+        },
+        "10": {
+            "a": "3",
+            "b": "5",
+            "c": "4",
+            "d": "6"
+        }
+    },
+    {
+        "1": "Both A and B",
+        "2": "Representing your problem with variable and parameter",
+        "3": "Solution, Problem",
+        "4": "Initial state",
+        "5": "Successor function, which takes current action and returns next immediate state",
+        "6": "Information Retrieval",
+        "7": "Mars Hover(Robot Navigation)",
+        "8": "Travelling salesman problem",
+        "9": "Uninformed search",
+        "10": "5"
+    }
+]
