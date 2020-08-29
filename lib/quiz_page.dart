@@ -4,20 +4,19 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:loksewaguide/resultPage.dart';
 
 class getjson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: DefaultAssetBundle.of(context).loadString("assets/ai_set1.json"),
+      future: DefaultAssetBundle.of(context).loadString("assets/ai_agent.json"),
       builder: (context, snapshot){
         List mydata = json.decode(snapshot.data.toString());
         if(mydata == null){
           return Scaffold(
             body: Center(
-              child: Text(
-                "Loading",
-              ),
+              child: CircularProgressIndicator(),
             )
         );
         }else{
@@ -50,7 +49,7 @@ class _quizpageState extends State<quizpage> {
   int i = 1;
   int timer = 30;
   String showtimer = "30";
-
+  bool disableAnswer = false;
 
   Map<String, Color> btncolor ={
     "a": Colors.deepPurple,
@@ -88,16 +87,21 @@ class _quizpageState extends State<quizpage> {
   void nextquestion(){
     canceltimer = false;
     timer = 30;
+    
+
     setState(() {
-      if(i<10){
+      if(i<20){
         i++;
       }else{
-
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => ResultPage(),
+        ));
       }
       btncolor["a"] = Colors.deepPurple;
       btncolor["b"] = Colors.deepPurple;
       btncolor["c"] = Colors.deepPurple;
       btncolor["d"] = Colors.deepPurple;
+      disableAnswer = false;
 
     });
     starttimer();
@@ -113,6 +117,7 @@ class _quizpageState extends State<quizpage> {
     setState(() {
       btncolor[k] = colortoshow;
       canceltimer = true;
+      disableAnswer = true;
     });
 
     Timer(Duration(seconds: 1), nextquestion);
@@ -204,11 +209,21 @@ class _quizpageState extends State<quizpage> {
                         ),
                       ],
                     ),
-                    Text(
-                      "Score : $marks / 100",
-                      style: TextStyle(
-                        fontSize: 25,
-                      ),
+                    Row(
+                      children: [
+                        Text(
+                          "Question $i of 20",
+                          style: TextStyle(
+                            fontSize: 25,
+                          ),
+                        ),
+                        Text(
+                          "Score : $marks / 20",
+                          style: TextStyle(
+                            fontSize: 25,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 )
@@ -230,14 +245,17 @@ class _quizpageState extends State<quizpage> {
             ),
             Expanded(
               flex: 6,
-              child: Container(
-                child: Column(
-                  children: [
-                    choiceButton("a"),
-                    choiceButton("b"),
-                    choiceButton("c"),
-                    choiceButton("d"),
-                  ],
+              child: AbsorbPointer(
+                absorbing: disableAnswer,
+                child: Container(
+                  child: Column(
+                    children: [
+                      choiceButton("a"),
+                      choiceButton("b"),
+                      choiceButton("c"),
+                      choiceButton("d"),
+                    ],
+                  ),
                 ),
               ),
             ),

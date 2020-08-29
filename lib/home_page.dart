@@ -85,6 +85,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Computer Officer"),
       ),
+      drawer: Drawer(),
       body: ListView(
         children: [
           customcard("Artificial Intelligence", "Learn more about artificial intelligence.", "images/ai.jpg"),

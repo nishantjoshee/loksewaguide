@@ -1,0 +1,169 @@
+[
+    {
+        "1": "Which instruments are used for perceiving and acting upon the environment?",
+        "2": "What is meant by agent’s percept sequence?",
+        "3": "How many types of agents are there in artificial intelligence?",
+        "4": "What is the rule of simple reflex agent?",
+        "5": "What are the composition for agents in artificial intelligence?",
+        "6": "In which agent does the problem generator is present?",
+        "7": "Which is used to improve the agents performance?",
+        "8": "Which agent deals with happy and unhappy states?",
+        "9": "Which action sequences are used to achieve the agent’s goal?",
+        "10": " Which element in the agent are used for selecting external actions?",
+        "11": "The performance of an agent can be improved by __________",
+        "12": "External actions of the agent is selected by __________",
+        "13": "The action of the Simple reflex agent completely depends upon __________",
+        "14": "Which of the following could be the approaches to Artificial Intelligence?",
+        "15": "An Artificial Neural Network Is based on?",
+        "16": "The Face Recognition system is based on?",
+        "17": "A completely automated chess engine (Learn from previous games) is based on?",
+        "18": "A basic line following robot is based on __________",
+        "19": "Which of the following task/tasks Artificial Intelligence could not do yet?",
+        "20": "What among the following is/are the example of the intelligent agent/agents?"
+        
+    },
+    {
+        "1": {
+            "a": "Sensors and Actuators",
+            "b": "Sensors",
+            "c": "Perceiver",
+            "d": "None of the mentioned"
+        },
+        "2": {
+            "a": "Used to perceive the environment",
+            "b": "Complete history of actuator",
+            "c": "Complete history of perceived things",
+            "d": "None of the mentioned"
+        },
+        "3": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "4": {
+            "a": "Simple-action rule",
+            "b": "Condition-action rule",
+            "c": "Simple & Condition-action rule",
+            "d": "None of the mentioned"
+        },
+        "5": {
+            "a": "Program",
+            "b": "Architecture",
+            "c": "Both Program & Architecture",
+            "d": "None of the mentioned"
+        },
+        "6": {
+            "a": "Learning agent",
+            "b": "Observing agent",
+            "c": "Reflex agent",
+            "d": "None of the mentioned"
+        },
+        "7": {
+            "a": "Perceiving",
+            "b": "Learning",
+            "c": "Observing",
+            "d": "None of the mentioned"
+        },
+        "8": {
+            "a": "Simple reflex agent",
+            "b": "Model based agent",
+            "c": "Learning agent",
+            "d": "Utility based agent"
+        },
+        "9": {
+            "a": "Search",
+            "b": "Plan",
+            "c": "Retrieve",
+            "d": "Both Search & Plan"
+        },
+        "10": {
+            "a": "Perceive",
+            "b": "Performance",
+            "c": "Learning",
+            "d": "Actuator"
+        },
+        "11": {
+            "a": "Learning",
+            "b": "Observing",
+            "c": "Perceiving",
+            "d": "None of the mentioned"
+        },
+        "12": {
+            "a": "Perceive",
+            "b": "Performance",
+            "c": "Learning",
+            "d": "Actuator"
+        },
+        "13": {
+            "a": "Perception history",
+            "b": "Current perception",
+            "c": "Learning theory",
+            "d": "Utility functions"
+        },
+        "14": {
+            "a": "Strong Artificial Intelligence",
+            "b": "Weak Artificial Intelligence",
+            "c": "Applied Artificial Intelligence",
+            "d": "All of the mentioned"
+        },
+        "15": {
+            "a": "Strong Artificial Intelligence approach",
+            "b": "Weak Artificial Intelligence approach",
+            "c": "Cognitive Artificial Intelligence approach",
+            "d": "Applied Artificial Intelligence approach"
+        },
+        "16": {
+            "a": "Strong Artificial Intelligence approach",
+            "b": "Weak Artificial Intelligence approach",
+            "c": "Cognitive Artificial Intelligence approach",
+            "d": "Applied Artificial Intelligence approach"
+        },
+        "17": {
+            "a": "Strong Artificial Intelligence approach",
+            "b": "Weak Artificial Intelligence approach",
+            "c": "Cognitive Artificial Intelligence approach",
+            "d": "Applied Artificial Intelligence approach"
+        },
+        "18": {
+            "a": "Strong Artificial Intelligence approach",
+            "b": "Weak Artificial Intelligence approach",
+            "c": "Cognitive Artificial Intelligence approach",
+            "d": "Applied Artificial Intelligence approach"
+        },
+        "19": {
+            "a": "Understand natural language robustly",
+            "b": "Web mining",
+            "c": "Construction of plans in real time dynamic systems",
+            "d": "All of the mentioned"
+        },
+        "20": {
+            "a": "Human",
+            "b": "Robot",
+            "c": "Autonomous Spacecraft",
+            "d": "All of the mentioned"
+        }
+    },
+    {
+        "1": "Learning",
+        "2": "Learning",
+        "3": "Learning",
+        "4": "Learning",
+        "5": "Learning",
+        "6": "Learning",
+        "7": "Learning",
+        "8": "Learning",
+        "9": "Learning",
+        "10": "Learning",
+        "11": "Learning",
+        "12": "Performance",
+        "13": "Current perception",
+        "14": "All of the mentioned",
+        "15": "Cognitive Artificial Intelligence approach",
+        "16": "Applied Artificial Intelligence approach",
+        "17": "Strong Artificial Intelligence approach",
+        "18": "Weak Artificial Intelligence approach",
+        "19": "All of the mentioned",
+        "20": "All of the mentioned"
+    }
+]
