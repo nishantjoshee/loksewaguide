@@ -1,36 +1,11 @@
 import 'dart:async';
-import 'dart:convert';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loksewaguide/resultPage.dart';
 
-class getjson extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: DefaultAssetBundle.of(context).loadString("assets/ai_agent.json"),
-      builder: (context, snapshot){
-        List mydata = json.decode(snapshot.data.toString());
-        if(mydata == null){
-          return Scaffold(
-            body: Center(
-              child: CircularProgressIndicator(),
-            )
-        );
-        }else{
-        return quizpage(mydata : mydata);
-        }
-      },
-    );
-  }
-}
 
 class quizpage extends StatefulWidget {
-
   var mydata;
-
   quizpage({Key key, @required this.mydata}) : super(key : key);
 
   @override
@@ -38,7 +13,6 @@ class quizpage extends StatefulWidget {
 }
 
 class _quizpageState extends State<quizpage> {
-
   var mydata;
   _quizpageState(this.mydata);
 
@@ -87,7 +61,6 @@ class _quizpageState extends State<quizpage> {
   void nextquestion(){
     canceltimer = false;
     timer = 30;
-    
 
     setState(() {
       if(i<20){
@@ -97,6 +70,7 @@ class _quizpageState extends State<quizpage> {
           builder: (context) => ResultPage(),
         ));
       }
+
       btncolor["a"] = Colors.deepPurple;
       btncolor["b"] = Colors.deepPurple;
       btncolor["c"] = Colors.deepPurple;
@@ -126,8 +100,8 @@ class _quizpageState extends State<quizpage> {
   Widget choiceButton(String k){
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: 10,
-        horizontal: 20,
+        vertical: 4,
+        horizontal: 10,
       ),
       child: MaterialButton(
         padding: EdgeInsets.all(10),
@@ -136,17 +110,16 @@ class _quizpageState extends State<quizpage> {
           mydata[1][i.toString()][k],
           textAlign: TextAlign.left,
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 13,
             color: Colors.white,
-
           ),
         ),
         color: btncolor[k],
         minWidth: 500,
-        height: 40,
+        height: 10,
         splashColor: Colors.amber,
         highlightColor: Colors.amber,
-        elevation: 6,
+        elevation: 7,
       ),
     );
   }
@@ -169,6 +142,7 @@ class _quizpageState extends State<quizpage> {
               ),
               actions: [
                 FlatButton(
+                  color: Colors.deepPurple,
                   onPressed: (){
                     Navigator.of(context).pop();
                   },
@@ -184,82 +158,110 @@ class _quizpageState extends State<quizpage> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-
-            Material(
-              color: Colors.white,
-              elevation: 5,
-              child: Container(
-                padding: EdgeInsets.fromLTRB(10, 40, 10, 10),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.fromLTRB(120, 0, 0, 0),
-                          child: Icon(
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20, 120, 5, 0),
+                  child: Material(
+                    shadowColor: Colors.deepPurple,
+                    elevation: 10,
+                    child: Container(
+                      color: Colors.red,
+                      padding: EdgeInsets.all(5),
+                      child: Row(
+                        children: [
+                          Icon(
                             Icons.timer,
-                            size: 40,
+                            color: Colors.white,
+                            size: 30,
                           ),
-                        ),
-                        Text(
-                          showtimer,
-                          style: TextStyle(
-                            fontSize: 35,
+                          Text(
+                            showtimer,
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          "Question $i of 20",
-                          style: TextStyle(
-                            fontSize: 25,
-                          ),
-                        ),
-                        Text(
-                          "Score : $marks / 20",
-                          style: TextStyle(
-                            fontSize: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ),
-            ),
-
-            Expanded(
-              flex: 2,
-              child: Container(
-                alignment: Alignment.bottomLeft,
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  mydata[0][i.toString()],
-                  style: TextStyle(
-                    fontSize: 20,
                   ),
                 ),
-              ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(10, 120, 5, 0),
+                  child: Material(
+                    shadowColor: Colors.deepPurple,
+                    elevation: 10,
+                    child: Container(
+                      color: Colors.indigo,
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        "$i of 20",
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(10, 120, 5, 0),
+                  child: Material(
+                    shadowColor: Colors.deepPurple,
+                    elevation: 10,
+                    child: Container(
+                      color: Colors.green,
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        "Score: $marks",
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Expanded(
-              flex: 6,
-              child: AbsorbPointer(
-                absorbing: disableAnswer,
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Material(
+                elevation: 10,
+                shadowColor: Colors.deepPurple,
                 child: Container(
-                  child: Column(
-                    children: [
-                      choiceButton("a"),
-                      choiceButton("b"),
-                      choiceButton("c"),
-                      choiceButton("d"),
-                    ],
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    mydata[0][i.toString()],
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
             ),
-
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Material(
+                elevation: 10,
+                shadowColor: Colors.deepPurple,
+                child: Container(
+                  child: AbsorbPointer(
+                    absorbing: disableAnswer,
+                    child: Column(
+                      children: [
+                        choiceButton("a"),
+                        choiceButton("b"),
+                        choiceButton("c"),
+                        choiceButton("d"),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
