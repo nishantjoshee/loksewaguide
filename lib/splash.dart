@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:loksewaguide/home_page.dart';
+import 'package:loksewaguide/quizList.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
