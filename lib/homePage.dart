@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loksewaguide/getJson.dart';
-import 'package:loksewaguide/splash.dart';
 
-class QuizList extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _QuizListState createState() => _QuizListState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _QuizListState extends State<QuizList> {
+class _HomePageState extends State<HomePage> {
   Widget customcard(String topicName, String jsonPath) {
     return Padding(
       padding: EdgeInsets.all(10),
@@ -45,7 +43,7 @@ class _QuizListState extends State<QuizList> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context)=>SplashScreen()));
+                                        builder: (BuildContext context)=>HomePage()));
                               },
                               child: Text(
                                 "Syllabus",
@@ -63,7 +61,7 @@ class _QuizListState extends State<QuizList> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context)=>SplashScreen()));
+                                        builder: (BuildContext context)=>HomePage()));
                               },
                               child: Text(
                                   "Notes",
@@ -99,7 +97,7 @@ class _QuizListState extends State<QuizList> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context)=>SplashScreen()));
+                                        builder: (BuildContext context)=>HomePage()));
                               },
                               child: Text(
                                   "Videos",
@@ -130,9 +128,8 @@ class _QuizListState extends State<QuizList> {
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Computer Officer"),
+        title: Text("PSC Computer Officer"),
       ),
-      drawer: Drawer(),
       body: ListView(
         children: [
 
@@ -148,6 +145,24 @@ class _QuizListState extends State<QuizList> {
           customcard(
               "Object Oriented Programming",
               "assets/history_of_ai_1.json"),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 20,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.description,color: Color.fromARGB(255, 0, 0, 0)),
+              title: new Text("Syllabus"),
+          ),
+
+          BottomNavigationBarItem(
+              icon: Icon(Icons.library_books,color: Color.fromARGB(255, 0, 0, 0)),
+              title: new Text('Model Sets'),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.feedback,color: Color.fromARGB(255, 0, 0, 0)),
+              title: new Text('Feedbackgir ')
+          ),
         ],
       ),
     );

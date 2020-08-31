@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loksewaguide/quizList.dart';
-import 'package:loksewaguide/splash.dart';
+import 'package:loksewaguide/homePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: QuizList(),
+      home: HomePage(),
     );
   }
 }
