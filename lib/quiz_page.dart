@@ -3,18 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loksewaguide/resultPage.dart';
 
-
-class quizpage extends StatefulWidget {
+class QuizPage extends StatefulWidget {
   var mydata;
-  quizpage({Key key, @required this.mydata}) : super(key : key);
+  int qnLength;
+  QuizPage({Key key, @required this.mydata, this.qnLength}) : super(key : key);
+
 
   @override
-  _quizpageState createState() => _quizpageState(mydata);
+  _QuizPageState createState() => _QuizPageState(mydata, qnLength);
 }
 
-class _quizpageState extends State<quizpage> {
+class _QuizPageState extends State<QuizPage> {
   var mydata;
-  _quizpageState(this.mydata);
+  int qnLength;
+  _QuizPageState(this.mydata, this.qnLength);
 
   Color colortoshow = Colors.deepPurple;
   Color right = Colors.green;
@@ -61,9 +63,10 @@ class _quizpageState extends State<quizpage> {
   void nextquestion(){
     canceltimer = false;
     timer = 30;
+    int length = qnLength;
 
     setState(() {
-      if(i<20){
+      if(i<length){
         i++;
       }else{
         Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -76,6 +79,7 @@ class _quizpageState extends State<quizpage> {
       btncolor["c"] = Colors.deepPurple;
       btncolor["d"] = Colors.deepPurple;
       disableAnswer = false;
+      qnLength = qnLength;
 
     });
     starttimer();
@@ -92,6 +96,7 @@ class _quizpageState extends State<quizpage> {
       btncolor[k] = colortoshow;
       canceltimer = true;
       disableAnswer = true;
+      qnLength = qnLength;
     });
 
     Timer(Duration(seconds: 1), nextquestion);
@@ -126,6 +131,7 @@ class _quizpageState extends State<quizpage> {
 
   @override
   Widget build(BuildContext context) {
+    int length = qnLength;
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitDown, DeviceOrientation.portraitUp
     ]);
@@ -196,7 +202,7 @@ class _quizpageState extends State<quizpage> {
                       color: Colors.indigo,
                       padding: EdgeInsets.all(5),
                       child: Text(
-                        "$i of 20",
+                        "$i of $length",
                         style: TextStyle(
                           fontSize: 25,
                           color: Colors.white,

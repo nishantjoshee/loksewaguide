@@ -2,13 +2,20 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:loksewaguide/quiz_page.dart';
 
-class getjson extends StatelessWidget {
+class GetQuizJson extends StatelessWidget {
+
+  GetQuizJson(this.jsonPath);
+
+  final String jsonPath;
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: DefaultAssetBundle.of(context).loadString("assets/ai_agent.json"),
+      future: DefaultAssetBundle.of(context).loadString(jsonPath),
       builder: (context, snapshot){
         List mydata = json.decode(snapshot.data.toString());
+        int qnLength = mydata[1].length;
+
         if(mydata == null){
           return Scaffold(
               body: Center(
@@ -16,7 +23,7 @@ class getjson extends StatelessWidget {
               )
           );
         }else{
-          return quizpage(mydata : mydata);
+          return QuizPage(mydata : mydata, qnLength : qnLength);
         }
       },
     );
