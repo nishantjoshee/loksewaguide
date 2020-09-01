@@ -12,6 +12,9 @@ class _HomePageState extends State<HomePage> {
     return Padding(
       padding: EdgeInsets.all(10),
       child: Material(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10)
+        ),
       shadowColor: Colors.deepPurple,
       elevation: 2,
       child: Container(
@@ -39,6 +42,10 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: RaisedButton(
+                              elevation: 6,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)
+                              ),
                               onPressed: (){
                                 Navigator.push(
                                     context,
@@ -57,6 +64,10 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: RaisedButton(
+                              elevation: 6,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
                               onPressed: (){
                                 Navigator.push(
                                     context,
@@ -75,6 +86,10 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: RaisedButton(
+                              elevation: 6,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
                               onPressed: (){
                                 Navigator.push(
                                     context,
@@ -82,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                                         builder: (BuildContext context)=>GetQuizJson(jsonPath)));
                               },
                               child: Text(
-                                  "Test",
+                                  "Quiz Test",
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
@@ -93,6 +108,32 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: RaisedButton(
+                              elevation: 6,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
+                              onPressed: (){
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context)=>HomePage()));
+                              },
+                              child: Text(
+                                "Solutions",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              color: Colors.deepPurple,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: RaisedButton(
+                              elevation: 6,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
                               onPressed: (){
                                 Navigator.push(
                                     context,
@@ -128,13 +169,23 @@ class _HomePageState extends State<HomePage> {
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
       appBar: AppBar(
+        elevation: 5,
         title: Text("PSC Computer Officer"),
       ),
       body: ListView(
         children: [
 
           customcard(
+              "Computer Fundamental",
+              "assets/ai_agent.json"),
+          customcard(
               "Computer Network",
+              "assets/ai_agent.json"),
+          customcard(
+              "Computer Organization & Architecture",
+              "assets/ai_agent.json"),
+          customcard(
+              "Digital Electronics / Logic Circuit",
               "assets/ai_agent.json"),
           customcard(
               "Artificial Intelligence",
@@ -143,16 +194,36 @@ class _HomePageState extends State<HomePage> {
               "Data Structures & Algorithms",
               "assets/ai_set1.json"),
           customcard(
+              "Database Management System",
+              "assets/ai_agent.json"),
+          customcard(
               "Object Oriented Programming",
               "assets/history_of_ai_1.json"),
+          customcard(
+              "Operating System",
+              "assets/ai_agent.json"),
+          customcard(
+              "Computer Graphics",
+              "assets/ai_agent.json"),
+          customcard(
+              "Software Engineering Principles (System Analysis & Desgin)",
+              "assets/ai_agent.json"),
+          customcard(
+              "Theory of Computation",
+              "assets/ai_agent.json"),
+          customcard(
+              "Compiler Design",
+              "assets/ai_agent.json"),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 20,
+        elevation: 10,
         items: [
+
           BottomNavigationBarItem(
-              icon: Icon(Icons.description,color: Color.fromARGB(255, 0, 0, 0)),
-              title: new Text("Syllabus"),
+              icon: Icon(Icons.home,color: Color.fromARGB(255, 0, 0, 0)),
+              title: new Text("Home"),
           ),
 
           BottomNavigationBarItem(
