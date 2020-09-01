@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loksewaguide/getJson.dart';
 import 'package:loksewaguide/pdfPage.dart';
-import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 
 class HomePage extends StatefulWidget {
   @override

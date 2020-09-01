@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:loksewaguide/homePage.dart';
-import 'package:loksewaguide/pdfPage.dart';
 
 void main() {
   runApp(MyApp());
