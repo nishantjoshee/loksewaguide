@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: RaisedButton(
-                                elevation: 6,
+                                elevation: 2,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
                                 onPressed: () {
@@ -54,6 +54,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   "Syllabus",
                                   style: TextStyle(
+                                    fontSize: 12,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: RaisedButton(
-                                elevation: 6,
+                                elevation: 2,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
                                 onPressed: () {
@@ -79,6 +80,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   "Notes",
                                   style: TextStyle(
+                                    fontSize: 12,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -88,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: RaisedButton(
-                                elevation: 6,
+                                elevation: 2,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
                                 onPressed: () {
@@ -101,6 +103,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   "Quiz Test",
                                   style: TextStyle(
+                                    fontSize: 12,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -110,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: RaisedButton(
-                                elevation: 6,
+                                elevation: 2,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
                                 onPressed: () {
@@ -123,6 +126,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   "Solutions",
                                   style: TextStyle(
+                                    fontSize: 12,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -132,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: RaisedButton(
-                                elevation: 6,
+                                elevation: 2,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
                                 onPressed: () {
@@ -145,6 +149,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   "Videos",
                                   style: TextStyle(
+                                    fontSize: 12,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -178,8 +183,9 @@ class _HomePageState extends State<HomePage> {
         children: [
           customcard(
             "Computer Fundamental",
-            "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
+            "assets/computer_fundamental_1.json",
+            "https://github.com/nishantjoshee/myfiles/blob/master/Document%2023.pdf?raw=true",
+
           ),
           customcard(
             "Computer Network",

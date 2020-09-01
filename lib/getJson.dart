@@ -14,7 +14,7 @@ class GetQuizJson extends StatelessWidget {
       future: DefaultAssetBundle.of(context).loadString(jsonPath),
       builder: (context, snapshot){
         List mydata = json.decode(snapshot.data.toString());
-        int qnLength = mydata[1].length;
+        final int qnLength = mydata[0].length;
 
         if(mydata == null){
           return Scaffold(

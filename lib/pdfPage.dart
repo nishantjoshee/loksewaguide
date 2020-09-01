@@ -10,16 +10,19 @@ class PDFViewerCachedFromUrl extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cached PDF From Url'),
+        title: const Text('Computer Officer Notes'),
       ),
-      body: const PDF(
-        fitPolicy: FitPolicy.WIDTH,
+      body: PDF(
       ).cachedFromUrl(
         url,
-        placeholder: (double progress) => Center(child: Text('$progress %')),
+        placeholder: (double progress) => Center(
+            child: Text(
+              '$progress %',
+              style: TextStyle(fontSize: 30),
+            )
+        ),
         errorWidget: (dynamic error) => Center(child: Text(error.toString())),
       ),
     );
   }
 }
-

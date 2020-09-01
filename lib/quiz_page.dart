@@ -6,8 +6,7 @@ import 'package:loksewaguide/resultPage.dart';
 class QuizPage extends StatefulWidget {
   var mydata;
   int qnLength;
-  QuizPage({Key key, @required this.mydata, this.qnLength}) : super(key : key);
-
+  QuizPage({Key key, @required this.mydata, this.qnLength}) : super(key: key);
 
   @override
   _QuizPageState createState() => _QuizPageState(mydata, qnLength);
@@ -27,48 +26,47 @@ class _QuizPageState extends State<QuizPage> {
   String showtimer = "30";
   bool disableAnswer = false;
 
-  Map<String, Color> btncolor ={
+  Map<String, Color> btncolor = {
     "a": Colors.deepPurple,
     "b": Colors.deepPurple,
     "c": Colors.deepPurple,
     "d": Colors.deepPurple,
   };
 
-   bool canceltimer = false;
+  bool canceltimer = false;
 
   @override
-  void initState(){
+  void initState() {
     starttimer();
     super.initState();
   }
 
   void starttimer() async {
     const onesec = Duration(seconds: 1);
-    Timer.periodic(onesec, (Timer t){
+    Timer.periodic(onesec, (Timer t) {
       setState(() {
-        if(timer < 1){
+        if (timer < 1) {
           t.cancel();
           nextquestion();
-        }else if(canceltimer == true){
+        } else if (canceltimer == true) {
           t.cancel();
-        }else{
+        } else {
           timer = timer - 1;
         }
         showtimer = timer.toString();
       });
     });
-
   }
 
-  void nextquestion(){
+  void nextquestion() {
     canceltimer = false;
     timer = 30;
     int length = qnLength;
 
     setState(() {
-      if(i<length){
+      if (i < length) {
         i++;
-      }else{
+      } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => ResultPage(),
         ));
@@ -80,16 +78,15 @@ class _QuizPageState extends State<QuizPage> {
       btncolor["d"] = Colors.deepPurple;
       disableAnswer = false;
       qnLength = qnLength;
-
     });
     starttimer();
   }
 
-  void checkanswwer(String k){
-    if(mydata[2][i.toString()] == mydata[1][i.toString()][k]){
+  void checkanswwer(String k) {
+    if (mydata[2][i.toString()] == mydata[1][i.toString()][k]) {
       marks = marks + 1;
       colortoshow = right;
-    }else{
+    } else {
       colortoshow = wrong;
     }
     setState(() {
@@ -102,13 +99,14 @@ class _QuizPageState extends State<QuizPage> {
     Timer(Duration(seconds: 1), nextquestion);
   }
 
-  Widget choiceButton(String k){
+  Widget choiceButton(String k) {
     return Padding(
       padding: EdgeInsets.symmetric(
         vertical: 4,
         horizontal: 10,
       ),
       child: MaterialButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         padding: EdgeInsets.all(10),
         onPressed: () => checkanswwer(k),
         child: Text(
@@ -124,7 +122,7 @@ class _QuizPageState extends State<QuizPage> {
         height: 10,
         splashColor: Colors.amber,
         highlightColor: Colors.amber,
-        elevation: 7,
+        elevation: 2,
       ),
     );
   }
@@ -132,33 +130,27 @@ class _QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     int length = qnLength;
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitDown, DeviceOrientation.portraitUp
-    ]);
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return WillPopScope(
-      onWillPop: (){
+      onWillPop: () {
         return showDialog(
             context: context,
-            builder: (context) =>AlertDialog(
-              title: Text(
-                "Hey, Computer Officer !"
-              ),
-              content: Text(
-                "You can't go back during quiz",
-              ),
-              actions: [
-                FlatButton(
-                  color: Colors.deepPurple,
-                  onPressed: (){
-                    Navigator.of(context).pop();
-                  },
-                  child: Text(
-                    "Ok"
+            builder: (context) => AlertDialog(
+                  title: Text("Hey, Computer Officer !"),
+                  content: Text(
+                    "You can't go back during quiz",
                   ),
-                )
-              ],
-            )
-        );
+                  actions: [
+                    FlatButton(
+                      color: Colors.deepPurple,
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text("Ok"),
+                    )
+                  ],
+                ));
       },
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -169,8 +161,10 @@ class _QuizPageState extends State<QuizPage> {
                 Padding(
                   padding: EdgeInsets.fromLTRB(20, 120, 5, 0),
                   child: Material(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
                     shadowColor: Colors.deepPurple,
-                    elevation: 10,
+                    elevation: 2,
                     child: Container(
                       color: Colors.red,
                       padding: EdgeInsets.all(5),
@@ -179,12 +173,12 @@ class _QuizPageState extends State<QuizPage> {
                           Icon(
                             Icons.timer,
                             color: Colors.white,
-                            size: 30,
+                            size: 25,
                           ),
                           Text(
                             showtimer,
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 20,
                               color: Colors.white,
                             ),
                           ),
@@ -196,15 +190,17 @@ class _QuizPageState extends State<QuizPage> {
                 Padding(
                   padding: EdgeInsets.fromLTRB(10, 120, 5, 0),
                   child: Material(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
                     shadowColor: Colors.deepPurple,
-                    elevation: 10,
+                    elevation: 2,
                     child: Container(
                       color: Colors.indigo,
                       padding: EdgeInsets.all(5),
                       child: Text(
                         "$i of $length",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           color: Colors.white,
                         ),
                       ),
@@ -214,15 +210,17 @@ class _QuizPageState extends State<QuizPage> {
                 Padding(
                   padding: EdgeInsets.fromLTRB(10, 120, 5, 0),
                   child: Material(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
                     shadowColor: Colors.deepPurple,
-                    elevation: 10,
+                    elevation: 2,
                     child: Container(
                       color: Colors.green,
                       padding: EdgeInsets.all(5),
                       child: Text(
                         "Score: $marks",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           color: Colors.white,
                         ),
                       ),
@@ -234,7 +232,9 @@ class _QuizPageState extends State<QuizPage> {
             Padding(
               padding: EdgeInsets.all(20),
               child: Material(
-                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                elevation: 2,
                 shadowColor: Colors.deepPurple,
                 child: Container(
                   padding: EdgeInsets.all(10),
@@ -242,7 +242,7 @@ class _QuizPageState extends State<QuizPage> {
                     mydata[0][i.toString()],
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
@@ -251,7 +251,7 @@ class _QuizPageState extends State<QuizPage> {
             Padding(
               padding: EdgeInsets.all(10),
               child: Material(
-                elevation: 10,
+                elevation: 2,
                 shadowColor: Colors.deepPurple,
                 child: Container(
                   child: AbsorbPointer(

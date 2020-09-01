@@ -1,0 +1,409 @@
+[
+    {
+        "1": "A process is a _______.",
+        "2": "The word processing feature that catches most random typographical errors and misspellings is known as _____.",
+        "3": "What is smallest unit of the information?",
+        "4": "What is the decimal equivalent of the binary number 10111?",
+        "5": "What is the term for a temporary storage area that compensates for differences in data rate and data flow between devices?",
+        "6": "How many color dots make up one color pixel on a screen?",
+        "7": "Which of the following values is the correct value of this hexadecimal code 1F.01B?",
+        "8": "How is the data stored on the diskette?",
+        "9": "Which of the following is the smallest visual element on a video monitor?",
+        "10": "Which of the following natural element is the primary element in computer chips?",
+        "11": "Which of the following programs enables you to calculate numbers related to rows and columns?",
+        "12": "Which of the following is a structured programming technique that graphically represents the detailed steps required to solve a program?",
+        "13": "Which of the following values is the correct value of this hexadecimal code ABCDEF?",
+        "14": "Which of the following is an output device?",
+        "15": "Which of the following is an input device?",
+        "16": "Which of the following is the extension of Notepad?",
+        "17": "BIOS is used?",
+        "18": "What is the mean of the Booting in the system?",
+        "19": "A computer is accurate, but if the result of a computation is false, what is the main reason for it?",
+        "20": "The central processing unit is located in the _____.",
+        "21": "Which one of the following groups contains graphical file extensions?",
+        "22": "Which of the following is equal to a gigabyte?",
+        "23": "How many bytes does 4 kilobytes represent?",
+        "24": "Which type of program acts as an intermediary between a user of a computer and the computer hardware?",
+        "25": "What kind of language can computer understand?",
+        "26": "Which of the following values is the correct value of this binary code 1011 and 1111?",
+        "27": "Which of the following is not one of the internal components of a CPU?",
+        "28": "What is the speed of computer measured in?",
+        "29": "What is the full form of RAM?",
+        "30": "What is the full form of DRAM?",
+        "31": "Which one of the following software applications would be the most appropriate for performing numerical and statistical calculations?",
+        "32": "Which of the following is not considered hardware?",
+        "33": "Which of the following is exclusively a sequential access storage device?",
+        "34": "Akshat has created a story of ten pages, but only wants to print the first two pages. Which printer command should he choose?",
+        "35": "What is the full form of SRAM?",
+        "36": "What is the full form of USB?",
+        "37": "Which one of the following is not a form of data storage media?",
+        "38": "What is five main components of a computer system?",
+        "39": "Which of the following numbers is a binary number?",
+        "40": "Which one of the following is the best fire extinguisher for IT equipment?",
+        "41": "One millisecond is ",
+        "42": "Which of the following statement is correct regarding a template prepared by a word processing package?",
+        "43": "Which of the following would be the correct description for WORM virus?",
+        "44": "A hard disk drive can be directly connected to a PC via a _____.",
+        "45": "The use of the IC in a computer has ______.",
+        "46": "Consider the following path C:/Device/Module/Module 1. What is name of the file in this path?",
+        "47": "What is the full form of SCSI?",
+        "48": "Which one of the following is not input device?",
+        "49": "Which one of the following is an example of the browser software?",
+        "50": "Which one of the following commands can be used to work on a file?"
+        
+    },
+    {
+        "1": {
+            "a": "single thread of execution.",
+            "b": "program in the execution",
+            "c": "program in the memory",
+            "d": "task"
+        },
+        "2": {
+            "a": "Grammar checker",
+            "b": "Spell checker",
+            "c": "Word checker",
+            "d": "None of the these"
+        },
+        "3": {
+            "a": "A bit",
+            "b": "A byte",
+            "c": "A block",
+            "d": "A nibble"
+        },
+        "4": {
+            "a": "21",
+            "b": "39",
+            "c": "42",
+            "d": "23"
+        },
+        "5": {
+            "a": "Buffer",
+            "b": "Bus",
+            "c": "Channel",
+            "d": "Modem"
+        },
+        "6": {
+            "a": "265",
+            "b": "16",
+            "c": "8",
+            "d": "3"
+        },
+        "7": {
+            "a": "35.0065918",
+            "b": "32.0065918",
+            "c": "31.0065918",
+            "d": "30.0065918"
+        },
+        "8": {
+            "a": "Ink",
+            "b": "Laser bubbles",
+            "c": "Magnetism",
+            "d": "Circuits"
+        },
+        "9": {
+            "a": "Character",
+            "b": "Pixel",
+            "c": "Byte",
+            "d": "Bit"
+        },
+        "10": {
+            "a": "Silicon",
+            "b": "Carbon",
+            "c": "Iron",
+            "d": "Uranium"
+        },
+        "11": {
+            "a": "Window program",
+            "b": "Spreadsheet program",
+            "c": "Graphics program",
+            "d": "Word program"
+        },
+        "12": {
+            "a": "Object-oriented programming",
+            "b": "Pseudocode",
+            "c": "Flowchart",
+            "d": "Top-down design"
+        },
+        "13": {
+            "a": "11259375",
+            "b": "11259379",
+            "c": "11259312",
+            "d": "11257593"
+        },
+        "14": {
+            "a": "Keyboard",
+            "b": "Mouse",
+            "c": "Light pen",
+            "d": "VDU"
+        },
+        "15": {
+            "a": "Plotter",
+            "b": "Printer",
+            "c": "VDU",
+            "d": "Mouse"
+        },
+        "16": {
+            "a": ".txt",
+            "b": ".xls",
+            "c": ".ppt",
+            "d": ".bmp"
+        },
+        "17": {
+            "a": "By operating system",
+            "b": "By compiler",
+            "c": "By interpreter",
+            "d": "By application software"
+        },
+        "18": {
+            "a": "Restarting computer",
+            "b": "Install the program",
+            "c": "To scan",
+            "d": "To turn off"
+        },
+        "19": {
+            "a": "Power failure",
+            "b": "The computer circuits",
+            "c": "Incorrect data entry",
+            "d": "Distraction"
+        },
+        "20": {
+            "a": "Hard disk",
+            "b": "System unit",
+            "c": "Memory unit",
+            "d": "Monitor"
+        },
+        "21": {
+            "a": "JPG, CPX, GCM",
+            "b": "GIF, TCE, WMF",
+            "c": "TCP, JPG, BMP",
+            "d": "JPG, GIF, BMP"
+        },
+        "22": {
+            "a": "1024 bytes",
+            "b": "512 GB",
+            "c": "1024 megabytes",
+            "d": "1024 bits"
+        },
+        "23": {
+            "a": "512",
+            "b": "1024",
+            "c": "4096",
+            "d": "8192"
+        },
+        "24": {
+            "a": "Operating system",
+            "b": "User thread",
+            "c": "Superuser thread",
+            "d": "Application program"
+        },
+        "25": {
+            "a": "Normal language",
+            "b": "Computer language",
+            "c": "Assembly language",
+            "d": "High-level language"
+        },
+        "26": {
+            "a": "11 and 14",
+            "b": "12 and 15",
+            "c": "11 and 15",
+            "d": "12 and 14"
+        },
+        "27": {
+            "a": "Control sequencer",
+            "b": "M-D-R",
+            "c": "M-D-R",
+            "d": "Floppy disk"
+        },
+        "28": {
+            "a": "Nanoseconds",
+            "b": "Kilo-seconds",
+            "c": "Gigahertz",
+            "d": "Megabytes"
+        },
+        "29": {
+            "a": "Remote Access Memory",
+            "b": "Random Access Memory",
+            "c": "Remote Access Memory",
+            "d": "Random Access Memory"
+        },
+        "30": {
+            "a": "Dynamic Remote Access Memory",
+            "b": "Dynamic Random-Access Memory",
+            "c": "Dependent Remote Access Memory",
+            "d": "Dependent Random-Access Memory"
+        },
+        "31": {
+            "a": "Database",
+            "b": "Document processor",
+            "c": "Graphics package",
+            "d": "Spreadsheet"
+        },
+        "32": {
+            "a": "Operating system",
+            "b": "CPU",
+            "c": "Keyboard",
+            "d": "Hard disk"
+        },
+        "33": {
+            "a": "Hard disk",
+            "b": "Floppy disk",
+            "c": "Magnetic tape",
+            "d": "DVD"
+        },
+        "34": {
+            "a": "Print all",
+            "b": "Print from 1 to 2",
+            "c": "Page setup",
+            "d": "Print Preview"
+        },
+        "35": {
+            "a": "Static Random-Access Memory",
+            "b": "Static Remote-Access Memory",
+            "c": "Setup Random-Access Memory",
+            "d": "Setup Remote-Access Memory"
+        },
+        "36": {
+            "a": "Unshielded System Board",
+            "b": "Universal System Board",
+            "c": "Unidentified System Bus",
+            "d": "Universal System Bus"
+        },
+        "37": {
+            "a": "A database",
+            "b": "Magnetic tape",
+            "c": "Magnetic disc",
+            "d": "Optical disc"
+        },
+        "38": {
+            "a": "CPU, CD-ROM, Mouse, Keyboard, Sound card",
+            "b": "Memory, Video card, Monitor, Software, Hardware",
+            "c": "Modem, Keyboard, Word Processor, Printer, Screen",
+            "d": "CPU, Memory, System bus, Input, Output"
+        },
+        "39": {
+            "a": "1 and 2",
+            "b": "0 and 0.1",
+            "c": "2 and 0",
+            "d": "0 and 1"
+        },
+        "40": {
+            "a": "Dry powder",
+            "b": "Bromo chloride",
+            "c": "CO2",
+            "d": "Water"
+        },
+        "41": {
+            "a": "1 second",
+            "b": "10th of a seconds",
+            "c": "1000th of a seconds",
+            "d": "10000th of a seconds"
+        },
+        "42": {
+            "a": "Any document can be saved as a template.",
+            "b": "Default template is used when you create a new file.",
+            "c": "Many templates contain text that gives one advice on how to use the template.",
+            "d": "Default settings are reflected by the normal document template and cannot be overwritten."
+        },
+        "43": {
+            "a": "It infects the boot sector.",
+            "b": "It propagates through the internet and e-mail.",
+            "c": "It has no effect in increasing the internet traffic.",
+            "d": "It alters the folder structure."
+        },
+        "44": {
+            "a": "SCSI interface",
+            "b": "Parallel interface",
+            "c": "WAN interface",
+            "d": "USB interface"
+        },
+        "45": {
+            "a": "Increased the amount of heating",
+            "b": "Reduced the size and cost of computers",
+            "c": "Reduced the peripheral devices to be used",
+            "d": "Reduced the performance capacity of the computer"
+        },
+        "46": {
+            "a": "Device",
+            "b": "Module",
+            "c": "Module 1",
+            "d": "C"
+        },
+        "47": {
+            "a": "Standard computer systems interface",
+            "b": "Small computer systems interface",
+            "c": "Super computer systems interface",
+            "d": "Small computer standard interface"
+        },
+        "48": {
+            "a": "Keyboard",
+            "b": "Mouse",
+            "c": "Speaker",
+            "d": "Scanner"
+        },
+        "49": {
+            "a": "Microsoft Word",
+            "b": "Notepad",
+            "c": "Internet navigator",
+            "d": "Internet explorer"
+        },
+        "50": {
+            "a": "Ctrl + XY",
+            "b": "Ctrl + 2",
+            "c": "Ctrl + C",
+            "d": "None of the these"
+        }
+    },
+    {
+        "1": "program in the execution",
+        "2": "Spell checker",
+        "3": "A bit",
+        "4": "23",
+        "5": "Buffer",
+        "6": "3",
+        "7": "31.0065918",
+        "8": "Magnetism",
+        "9": "Pixel",
+        "10": "Silicon",
+        "11": "Spreadsheet program",
+        "12": "Flowchart",
+        "13": "11259375",
+        "14": "VDU",
+        "15": "Mouse",
+        "16": ".txt",
+        "17": "By operating system",
+        "18": "Restarting computer",
+        "19": "Incorrect data entry",
+        "20": "System unit",
+        "21": "JPG, GIF, BMP",
+        "22": "1024 megabytes",
+        "23": "4096",
+        "24": "Operating system",
+        "25": "Assembly language",
+        "26": "11 and 15",
+        "27": "Floppy disk",
+        "28": "Gigahertz",
+        "29": "Random Access Memory",
+        "30": "Dynamic Random-Access Memory",
+        "31": "Spreadsheet",
+        "32": "Operating system",
+        "33": "Magnetic tape",
+        "34": "Print from 1 to 2",
+        "35": "Static Random-Access Memory",
+        "36": "Universal System Bus",
+        "37": "A database",
+        "38": "CPU, Memory, System bus, Input, Output",
+        "39": "0 and 1",
+        "40": "CO2",
+        "41": "1000th of a seconds",
+        "42": "Any document can be saved as a template.",
+        "43": "It propagates through the internet and e-mail.",
+        "44": "SCSI interface",
+        "45": "Reduced the size and cost of computers",
+        "46": "Module 1",
+        "47": "Small computer system interface",
+        "48": "Speaker",
+        "49": "Internet explorer",
+        "50": "Ctrl + C"
+    }
+]
