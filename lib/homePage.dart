@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loksewaguide/getJson.dart';
-import 'package:loksewaguide/pdfPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -70,12 +69,9 @@ class _HomePageState extends State<HomePage> {
                                 onPressed: () {
                                   Navigator.push(
                                       context,
-                                    MaterialPageRoute<dynamic>(
-                                      builder: (_) => PDFViewerCachedFromUrl(
-                                        url: noteUrl,
-                                      ),
-                                    ),
-                                  );
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              GetQuizJson(jsonPath)));
                                 },
                                 child: Text(
                                   "Notes",

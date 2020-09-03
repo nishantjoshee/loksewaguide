@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loksewaguide/homePage.dart';
+import 'package:loksewaguide/markDown.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: MarkDown(),
     );
   }
 }
