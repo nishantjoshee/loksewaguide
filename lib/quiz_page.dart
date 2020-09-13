@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loksewaguide/resultPage.dart';
@@ -68,8 +69,9 @@ class _QuizPageState extends State<QuizPage> {
         i++;
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => ResultPage(),
+          builder: (context) => ResultPage(marks : marks, qnLength : qnLength, mydata : mydata),
         ));
+        canceltimer = true;
       }
 
       btncolor["a"] = Colors.deepPurple;
@@ -106,7 +108,7 @@ class _QuizPageState extends State<QuizPage> {
         horizontal: 10,
       ),
       child: MaterialButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         padding: EdgeInsets.all(10),
         onPressed: () => checkanswwer(k),
         child: Text(
@@ -156,115 +158,127 @@ class _QuizPageState extends State<QuizPage> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(20, 120, 5, 0),
-                  child: Material(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)),
-                    shadowColor: Colors.deepPurple,
-                    elevation: 2,
-                    child: Container(
-                      color: Colors.red,
-                      padding: EdgeInsets.all(5),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.timer,
-                            color: Colors.white,
-                            size: 25,
-                          ),
-                          Text(
-                            showtimer,
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(10, 120, 5, 0),
-                  child: Material(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)),
-                    shadowColor: Colors.deepPurple,
-                    elevation: 2,
-                    child: Container(
-                      color: Colors.indigo,
-                      padding: EdgeInsets.all(5),
-                      child: Text(
-                        "$i of $length",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(10, 120, 5, 0),
-                  child: Material(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    shadowColor: Colors.deepPurple,
-                    elevation: 2,
-                    child: Container(
-                      color: Colors.green,
-                      padding: EdgeInsets.all(5),
-                      child: Text(
-                        "Score: $marks",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: EdgeInsets.all(20),
+            Container(
+              height: 225,
+              width: double.infinity,
               child: Material(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                elevation: 2,
-                shadowColor: Colors.deepPurple,
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    mydata[0][i.toString()],
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
+                    borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40),
+                  bottomRight: Radius.circular(40),
+                )),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+                          child: Row(
+                            children: [
+                              Material(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(7.0),
+                                    child: Text("$i of $length",
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 15,
+                                        )),
+                                  ),
+                                  //color: Color.fromRGBO(69, 61, 85, 100),
+                                  color: Colors.white,
+                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ))
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(20, 40, 30, 0),
+                          child: Row(
+                            children: [
+                              Material(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(7.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.timer,
+                                        color: Colors.red,
+                                        size: 25,
+                                      ),
+                                      Text(
+                                        showtimer,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.red,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                //color: Color.fromRGBO(69, 61, 85, 100),
+                                color: Colors.white,
+                                elevation: 5,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(15, 40, 20, 0),
+                          child: Row(
+                            children: [
+                              Material(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(7.0),
+                                  child: Text("Score: $marks",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 15,
+                                      )),
+                                ),
+                                // color: Color.fromRGBO(69, 61, 85, 100),
+                                color: Colors.white,
+                                elevation: 5,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
+                      child: Text(
+                        mydata[0][i.toString()],
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.white,
+                          height: 1.5,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
+                color: Colors.deepPurple,
               ),
             ),
             Padding(
               padding: EdgeInsets.all(10),
-              child: Material(
-                elevation: 2,
-                shadowColor: Colors.deepPurple,
-                child: Container(
-                  child: AbsorbPointer(
-                    absorbing: disableAnswer,
-                    child: Column(
-                      children: [
-                        choiceButton("a"),
-                        choiceButton("b"),
-                        choiceButton("c"),
-                        choiceButton("d"),
-                      ],
-                    ),
-                  ),
+              child: AbsorbPointer(
+                absorbing: disableAnswer,
+                child: Column(
+                  children: [
+                    choiceButton("a"),
+                    choiceButton("b"),
+                    choiceButton("c"),
+                    choiceButton("d"),
+                  ],
                 ),
               ),
             ),

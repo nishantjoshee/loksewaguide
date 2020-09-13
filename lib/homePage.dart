@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Widget customcard(String topicName, String jsonPath, String noteUrl) {
+  Widget customcard(String topicName, String jsonPath) {
     return Padding(
       padding: EdgeInsets.all(10),
       child: Material(
@@ -51,29 +51,6 @@ class _HomePageState extends State<HomePage> {
                                               HomePage()));
                                 },
                                 child: Text(
-                                  "Syllabus",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                color: Colors.deepPurple,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: RaisedButton(
-                                elevation: 2,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                              GetQuizJson(jsonPath)));
-                                },
-                                child: Text(
                                   "Notes",
                                   style: TextStyle(
                                     fontSize: 12,
@@ -98,29 +75,6 @@ class _HomePageState extends State<HomePage> {
                                 },
                                 child: Text(
                                   "Quiz Test",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                color: Colors.deepPurple,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: RaisedButton(
-                                elevation: 2,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                              HomePage()));
-                                },
-                                child: Text(
-                                  "Solutions",
                                   style: TextStyle(
                                     fontSize: 12,
                                     color: Colors.white,
@@ -180,69 +134,54 @@ class _HomePageState extends State<HomePage> {
           customcard(
             "Computer Fundamental",
             "assets/computer_fundamental_1.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/Document%2023.pdf?raw=true",
-
           ),
           customcard(
             "Computer Network",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Computer Organization & Architecture",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Digital Electronics / Logic Circuit",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Artificial Intelligence",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
-
           ),
           customcard(
             "Data Structures & Algorithms",
             "assets/ai_set1.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Database Management System",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Object Oriented Programming",
             "assets/history_of_ai_1.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Operating System",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Computer Graphics",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Software Engineering Principles (System Analysis & Desgin)",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Theory of Computation",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
           customcard(
             "Compiler Design",
             "assets/ai_agent.json",
-            "https://github.com/nishantjoshee/myfiles/blob/master/noteByTutorialspoint.pdf?raw=true",
           ),
         ],
       ),
